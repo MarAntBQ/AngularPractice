@@ -1,0 +1,7 @@
+// CREATE 
+ng new 01-first-project --no-strict --standalone false --routing false
+
+ng serve
+
+// BOOTSTRAP
+npm install --save bootstrap@5
