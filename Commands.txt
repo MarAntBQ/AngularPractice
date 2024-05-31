@@ -5,3 +5,8 @@ ng serve
 
 // BOOTSTRAP
 npm install --save bootstrap@5
+
+
+// GENERATE COMPONENT
+
+ng generate component component-name || ng g c component
