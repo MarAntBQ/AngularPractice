@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,12 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
+  @Input({required: true}) id!: string;
   @Input({required: true}) avatar!: string;
   @Input({required: true}) name!: string;
+  @Output() select  = new EventEmitter();
 
   get imagePath(){
     return `assets/users/${this.avatar}`;
   }
 
-  onSelectUser(){}
+  onSelectUser(){
+    this.select.emit(this.id);
+  }
 }
